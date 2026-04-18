@@ -3,6 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="title" content="Frontend Mentor | Four Card Feature Section">
+  <meta name="description" content="A clean, responsive feature section layout challenge from Frontend Mentor, built with HTML and CSS Grid.">
+  <meta name="author" content="Henry">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://henrydevlab.github.io/four-card-feature-section/">
+  <meta property="og:title" content="Frontend Mentor | Four Card Feature Section">
+  <meta property="og:description" content="A responsive feature section layout featuring a unique 3-column grid design.">
+  <meta property="og:image" content="./design/desktop-preview.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
@@ -16,28 +29,42 @@
 </head>
 <body>
   
-  Reliable, efficient delivery
-  Powered by Technology
+  <header class="header">
+  <h1 class="header__title-light">Reliable, efficient delivery</h1>
+  <h1 class="header__title-bold">Powered by Technology</h1>
+  <p class="header__description">Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+</header>
 
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
+<main class="container">
+  <section class="card card--cyan">
+    <h2 class="card__title">Supervisor</h2>
+    <p class="card__text">Monitors activity to identify project roadblocks</p>
+    <img src="./images/icon-supervisor.svg" alt="Magnifying glass icon representing oversight" class="card__icon">
+  </section>
 
-  Supervisor
-  Monitors activity to identify project roadblocks
+  <section class="card card--red">
+      <h2 class="card__title">Team Builder</h2>
+      <p class="card__text">Scans our talent network to create the optimal team for your project</p>
+      <img src="./images/icon-team-builder.svg" alt="House icon representing team structure" class="card__icon">
+    </section>
 
-  Team Builder
-  Scans our talent network to create the optimal team for your project
+    <section class="card card--orange">
+      <h2 class="card__title">Karma</h2>
+      <p class="card__text">Regularly evaluates our talent to ensure quality</p>
+      <img src="./images/icon-karma.svg" alt="Lightbulb icon representing quality and ideas" class="card__icon">
+    </section>
 
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
+    <section class="card card--blue">
+      <h2 class="card__title">Calculator</h2>
+      <p class="card__text">Uses data from past projects to provide better delivery estimates</p>
+      <img src="./images/icon-calculator.svg" alt="Computer monitor icon representing data estimation" class="card__icon">
+    </section>
+  </main>
 
   
       <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/Henrydevlab">Henry</a>.
     </footer>
 </body>
 </html>
