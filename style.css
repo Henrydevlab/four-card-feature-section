@@ -1,0 +1,141 @@
+:root {
+  /* Primary Colors */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* Neutral Colors */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(212, 6%, 44%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  background-color: var(--very-light-gray);
+  color: var(--grayish-blue);
+  line-height: 1.6;
+  padding: 60px 30px;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto 60px;
+}
+
+.header__title-light {
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: var(--very-dark-blue);
+}
+
+.header__title-bold {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--very-dark-blue);
+  margin-bottom: 15px;
+}
+
+/* Card Container */
+.container {
+  display: grid;
+  gap: 25px;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+/* Individual Card Styles */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--cyan { border-top-color: var(--cyan); }
+.card--red { border-top-color: var(--red); }
+.card--orange { border-top-color: var(--orange); }
+.card--blue { border-top-color: var(--blue); }
+
+.card__title {
+  color: var(--very-dark-blue);
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.card__text {
+  font-size: 0.85rem;
+  margin-bottom: 35px;
+}
+
+.card__icon {
+  align-self: flex-end;
+  width: 57px;
+  height: 57px;
+}
+
+/* Attribution Section */
+.attribution { 
+  font-size: 0.6875rem; 
+  text-align: center; 
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Desktop Layout (1440px Design) */
+@media (min-width: 950px) {
+  .header__title-light, .header__title-bold {
+    font-size: 2.25rem;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+  }
+
+  /* Positioning cards in the 3x4 grid */
+  .card--cyan {
+    grid-column: 1;
+    grid-row: 2 / 4;
+  }
+
+  .card--red {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  .card--orange {
+    grid-column: 2;
+    grid-row: 3 / 5;
+  }
+
+  .card--blue {
+    grid-column: 3;
+    grid-row: 2 / 4;
+  }
+}
